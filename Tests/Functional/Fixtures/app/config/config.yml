@@ -1,0 +1,4 @@
+framework:
+    secret: crawler_detect
+    session:
+        storage_id: session.storage.mock_file
