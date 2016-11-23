@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="./Tests/bootstrap.php" colors="true">
+
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml" />
+    </logging>
+
+    <testsuites>
+        <testsuite name="functional">
+            <directory suffix="Test.php">./Tests/Functional</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <exclude>
+                <directory>./build</directory>
+                <directory>./Resources</directory>
+                <directory>./Tests</directory>
+                <directory>./vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <php>
+        <server name="KERNEL_DIR" value="./Tests/Functional/Fixtures/app" />
+    </php>
+</phpunit>

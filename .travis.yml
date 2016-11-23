@@ -1,0 +1,18 @@
+language: php
+php:
+    - '5.3'
+    - '7.0'
+
+env:
+    - SYMFONY_VERSION="2.3.*"
+    - SYMFONY_VERSION="3.0.*"
+
+before_install:
+    - mkdir -p build/logs
+    - composer self-update
+
+install:
+    - composer require satooshi/php-coveralls '~1.0'
+
+after_success:
+    - php vendor/bin/coveralls
