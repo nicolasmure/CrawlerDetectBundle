@@ -1,15 +1,18 @@
 language: php
-php:
-    - '5.3'
-    - '7.0'
 
-env:
-    - SYMFONY_VERSION="2.4.*"
-    - SYMFONY_VERSION="3.0.*"
+matrix:
+  include:
+    - php: 5.3
+      env:
+        - SYMFONY_VERSION='2.5.*'
+    - php: 7.0
+      env:
+        - SYMFONY_VERSION='3.0.*'
 
 before_install:
     - mkdir -p build/logs
     - composer self-update
+    - sh -c 'if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony=$SYMFONY_VERSION; fi;'
 
 install:
     - composer require satooshi/php-coveralls '~1.0'

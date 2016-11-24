@@ -11,7 +11,7 @@ class CrawlerDetectTest extends TestCase
     private $browserUA = 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0';
     private $crawlerUA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 
-    public function testRequestNotFromACrawler()
+    public function testBrowserRequest()
     {
         $rsMock = $this->getRequestStackMockWithMasterRequest($this->browserUA);
 
@@ -22,7 +22,7 @@ class CrawlerDetectTest extends TestCase
         $this->assertTrue($crawlerDetect->isCrawler($this->crawlerUA));
     }
 
-    public function testRequestFromACrawler()
+    public function testCrawlerRequest()
     {
         $rsMock = $this->getRequestStackMockWithMasterRequest($this->crawlerUA);
 
