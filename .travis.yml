@@ -4,7 +4,7 @@ php:
     - '7.0'
 
 env:
-    - SYMFONY_VERSION="2.3.*"
+    - SYMFONY_VERSION="2.4.*"
     - SYMFONY_VERSION="3.0.*"
 
 before_install:
