@@ -10,6 +10,9 @@
         <testsuite name="functional">
             <directory suffix="Test.php">./Tests/Functional</directory>
         </testsuite>
+        <testsuite name="unit">
+            <directory suffix="Test.php">./Tests/Unit</directory>
+        </testsuite>
     </testsuites>
 
     <filter>
