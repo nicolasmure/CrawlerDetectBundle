@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="crawler_detect" class="%crawler_detect.class%">
+        <service id="crawler_detect" class="%crawler_detect.class%" public="true">
             <argument type="service" id="request_stack" />
         </service>
     </services>
