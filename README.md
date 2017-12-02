@@ -28,6 +28,12 @@ class as a service (`crawler_detect`) to make it easier to use with Symfony
 Download the bundle using composer :
 
 ```bash
+$ composer require nmure/crawler-detect-bundle "^2.0.0"
+```
+
+For Symfony < 4.0, run :
+
+```bash
 $ composer require nmure/crawler-detect-bundle "^1.0.0"
 ```
 

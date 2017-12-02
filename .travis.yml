@@ -2,12 +2,9 @@ language: php
 
 matrix:
   include:
-    - php: 5.3
+    - php: 7.1
       env:
-        - SYMFONY_VERSION='2.5.*'
-    - php: 7.0
-      env:
-        - SYMFONY_VERSION='3.0.*'
+        - SYMFONY_VERSION='4.0.*'
 
 before_install:
     - mkdir -p build/logs
